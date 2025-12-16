@@ -1,0 +1,122 @@
+<!-- ========================= index.html ========================= -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Truyện Kiều – Nguyễn Du | Trang chủ</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS riêng -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="progress"></div>
+
+<header>
+  <h1>Nguyễn Du</h1>
+  <nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="kieu.html">Tác phẩm</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h2>TRUYỆN KIỀU</h2>
+    <p>Kiệt tác văn học dân tộc – bản trường ca về số phận con người và giá trị nhân đạo vượt thời gian.</p>
+    <a href="kieu.html" class="btn">Khám phá tác phẩm</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 – Dự án Văn học | Học sinh lớp 12</p>
+</footer>
+
+<script>
+  window.addEventListener('scroll',()=>{
+    const sc=document.documentElement.scrollTop;
+    const h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+    document.getElementById('progress').style.width=(sc/h*100)+'%';
+  });
+</script>
+
+</body>
+</html>
+
+
+<!-- ========================= kieu.html ========================= -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Truyện Kiều – Nội dung & Cảm nhận</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="progress"></div>
+
+<header>
+  <h1>Truyện Kiều</h1>
+  <nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="#summary">Tóm tắt</a>
+    <a href="#feeling">Cảm nhận</a>
+    <a href="#facts">Thông tin</a>
+  </nav>
+</header>
+
+<section id="summary">
+  <h3>Tóm tắt nội dung</h3>
+  <div class="card">
+    <p>Truyện Kiều kể về cuộc đời đầy bi kịch của Thúy Kiều – người con gái tài sắc vẹn toàn nhưng phải bán mình chuộc cha. Trải qua mười lăm năm lưu lạc trong xã hội phong kiến bất công, Kiều được trở về đoàn tụ gia đình nhưng hạnh phúc không còn trọn vẹn.</p>
+  </div>
+</section>
+
+<section id="feeling">
+  <h3>Cảm nhận cá nhân</h3>
+  <div class="card">
+    <p>Tác phẩm giúp em thấu hiểu sâu sắc số phận con người, đồng thời cảm nhận được tấm lòng nhân đạo và tài năng nghệ thuật bậc thầy của đại thi hào Nguyễn Du.</p>
+  </div>
+</section>
+
+<section id="facts">
+  <h3>Thông tin thú vị</h3>
+  <div class="card">
+    <ul>
+      <li>📘 Truyện Kiều gồm 3.254 câu thơ lục bát.</li>
+      <li>🌍 Được dịch ra hơn 20 ngôn ngữ.</li>
+      <li>🎭 Ảnh hưởng mạnh mẽ đến chèo, cải lương, ca trù.</li>
+    </ul>
+  </div>
+
+  <blockquote class="card">
+    “Đau đớn thay phận đàn bà,<br>Lời rằng bạc mệnh cũng là lời chung.”
+  </blockquote>
+</section>
+
+<button id="topBtn">↑</button>
+
+<footer>
+  <p>© 2025 – Dự án Văn học | Truyện Kiều – Nguyễn Du</p>
+</footer>
+
+<script>
+  window.addEventListener('scroll',()=>{
+    const sc=document.documentElement.scrollTop;
+    const h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+    document.getElementById('progress').style.width=(sc/h*100)+'%';
+    document.getElementById('topBtn').style.display=sc>400?'block':'none';
+  });
+  document.getElementById('topBtn').onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+</script>
+
+</body>
+</html>
